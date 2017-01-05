@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+
+body {
+	background: #eeeeee;
+}
+
+footer {
+	position: fixed;
+	bottom: 1em;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+#iron-router-progress {
+    background-color : #9EEBCF;
+    box-shadow       : 0 0 5px rgba(0,0,0,.1);
+}
+#iron-router-progress.spinner:before {
+    border-color : #9EEBCF;
+}
+
+#path0_fill {
+	color: red;
+	fill: red;
+	border: red;
+}

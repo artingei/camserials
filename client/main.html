@@ -1,0 +1,151 @@
+
+
+<template name="main">
+  <head>
+    <title>camserials</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <div class="animated fadeIn vh-100">
+    <nav class="db dt-ns w-100 border-box bg-navy ph1 pv5 pa5-ns z-1">
+      <a class="dim db dtc-ns v-mid-ns mid-gray link db w-50-ns w-100 mb2 mb0-ns tc tl-ns" href="/" title="Home">
+        <img src="/assets/logo.svg" class="" style="height:36px;" alt="Site Name">
+        <!-- <h1 class="fw9 tracked dark-blue tc ttu" style="font-size: 4em;">📷</h1> -->
+        <span class="link dim white f6 mt2 mt1-ns tracked-mega db ttu" title="subline">simplified 📷 serial search</span>
+      </a>
+      <div class="db dtc-ns v-mid w-100 w-75-ns tc tr-ns">
+        <a class="link dim white f5 f3-ns mt3 mt0-ns fw4 tracked dib ttu" href="/about" title="About">About</a>
+      </div>
+    </nav>
+    {{> Template.dynamic template=content}}
+    {{> Template.dynamic template=additional}}
+    <footer class="dn dib-ns f6 f5-ns silver w-90 w-100-ns center">
+      <span class="i">camserials</span> is an open-source app made by <a href="http://www.artingei.de/" target="_blank" class="light-red">jonas bergmeier</a> and provides serial based information about your classic camera.
+    </footer>
+  </div>
+</template>
+
+<template name="home">
+  <!-- <div class="center w-100 mv2 mv5-ns ph5-ns">
+    <h1 class="f2 f2-ns fw7 db">
+      Find information about your historic camera.
+    </h1>
+  </div> -->
+  <div class="animated fadeIn center w-90 w-100-ns navy pv3 pv3-ns mv4-ns">
+    <div class="w-100 ph5-ns center db">
+      <h2 class="f2-ns fw4 fw7-ns dib mr3-ns mb1 mb0-ns">I am looking for a </h2>
+      <select class="f3 f2-ns fw7 ba bw0 pv1 ph3 navy bg-white db dib-ns w-100 w5-ns mr3-ns shadow-4">
+        <option>Leica M</option>
+        <option disabled="true">Rolleiflex/Rolleicord (coming soon!)</option>
+        <option disabled="true">Hasselblad (coming soon!)</option>
+      </select>
+      <h2 class="f2-ns fw4 fw7-ns dib mr3-ns mb1 mb0-ns">… with serial number </h2>
+      <input class="f4 f2-ns fw7 navy pa2 db bw0 dib-ns w-100 w5-ns ml1-ns shadow-4" name="serial" type="number" id="serial">
+      <button id="cta" class="dim f4 f3-ns fw7 tracked no-underline bg-animate tc pa3 pv3-ns ph4-ns mt4 mt5-ns db white bw0 bg-navy bg-animate pointer ttu"><img src="/assets/search.svg" class="v-mid mr3" style="height: 24px; margin-top: -5px" alt="Site Name">search now</button>
+      <span id="error" class="animated slideInUp dn f3 light-red f2-ns red mt3 mt5-ns"></span>
+    </div>
+  </div>
+</template>
+
+<template name="about">
+ <article class="animated fadeIn cf w-90 w-100-ns pv3 ph5-ns center navy">
+  <header class="fl w-100 w-70-ns pv3-m pt5-ns pb0 mb0 mb2-ns">
+    <h2 class="lh-title f2 f1-ns navy mt0-ns">
+      camserials helps you to <span class="light-red">find specific camera models</span> from huge serial number pools.
+    </h2>
+  </header>
+  <section class="fl w-100">
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pr4">
+      <h3>Now</h3>
+      <p class="f4 lh-copy measure">
+        Initially I built <span class="i">camserials</span> just for myself until I realised it could provide some kind of value for the community. Currently <span class="i">camserials</span> is a simple search engine. When you enter the serial number of any classic Leica, Rolleiflex or Hasselblad you will get back a short abstract about the specific model.
+      </p>
+    </div>
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph2">
+      <h3>Future</h3>
+      <p class="f4 lh-copy measure">
+        If you are missing specific models or manufacturers you can contact me via <a href="mailto:issue@camserials.org" class="light-red">mail</a> or open an issue on github, where the project is published. Furthermore I am thinking about futher features. You are welcome to contribute your ideas to the project.
+      </p>
+    </div>
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph2">
+      <h3>Support</h3>
+      <p class="f4 lh-copy measure">
+        <span class="i">camserials</span> is built & maintained in my free time. If you are happy with the product you are free to send some coins over via <a href="https://www.patreon.com/" target="_blank" class="light-red">patreon</a>. If you spot errors within the dataset please mail me here. Thanks!
+      </p>
+    </div>
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pl4-ns pl2">
+      <h3>Disclaimer</h3>
+      <p class="f4-ns lh-copy measure">
+        <span class="i">camserials</span> is a free open-source project and does not belong to any organization.
+      </p>
+    </div>
+  </section>
+  </article>
+</template>
+
+<template name="results">
+  <section id="results" class="animated slideInUp z-0">
+    <div class="center w-100 bg-dark-blue vh-100 white pv4 mb0">
+      <div class="w-90 center w-100-ns ph5-ns center db">
+        <h1 class="fw4 dib mb1">Serial number <span id="serial" class="fw7">?</span> matches <span id="model" class="fw7">?</span>.</h1>
+          <button id="add" class="dn dib-ns dim f5 f4-ns fw7 no-underline bg-animate tc pv2 ph3 mt3 dib dark-blue pointer bw0 bg-nsight-gray bg-animate fr ttu">
+            <a href="/" class="navy">back to search</a>
+          </button>
+        <div class="db mt4 mt3-ns">
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
+            <dd class="f5 fw4 ml0 ttu">manufactured by</dd>
+            <dd id="date" class="f2 fw6 ml0"></dd>
+          </dl>
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
+            <dd class="f5 fw4 ml0 ttu">units produced</dd>
+            <dd id="units" class="f2 fw6 ml0"></dd>
+          </dl>
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
+            <dd class="f5 fw4 ml0 ttu">serial start</dd>
+            <dd id="start" class="f2 fw6 ml0"></dd>
+          </dl>
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
+            <dd class="f5 fw4 ml0 ttu">serial end</dd>
+            <dd id="end" class="f2 fw6 ml0"></dd>
+          </dl>
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
+            <dd class="f5 fw4 ml0 ttu">market value</dd>
+            <dd id="units" class="f2 fw6 ml0"><a href="http://collectiblend.com/" target="_blank" id="collectiblendLink" class="white underline">collectiblend ➔</a></dd>
+          </dl>
+        </div>
+        <button id="add" class="dn-ns db dim f5 f4-ns fw7 no-underline bg-animate tc pv2 ph3 mv3 dib dark-blue pointer bw0 bg-nsight-gray bg-animate ttu">
+          back to search
+        </button>
+      </div>
+    </div>
+    <!-- <div class="center w-100 pv2 mb0">
+      <div class="w-100 ph5-ns center db">
+        <a href="/">
+          <button id="cta" class="dim f4 f3-ns fw4 tracked no-underline bg-animate tc pv3 ph4 mt3 mt5-ns bw0 db white bw0 bg-navy bg-animate pointer ttu">back</button>
+        </a>
+      </div>
+    </div> -->
+  </section>
+</template>
+
+<template name="suggestions">
+  <div class="w-100 bg-blue white pv3 ph5-ns center">
+    <h2 class="f4 fw7 dib mb0 under">Recently identified units</h2>
+    <ul class="list f4 pl0 mt3 mb0">
+      <li class="pv2 dib mr3">
+        <a href="/cam/952016" class="link white lh-title">
+          <span class="fw7 underline-hover">#952016</span>
+          <span class="db">Leica M3, A, Germany</span>
+        </a>
+      </li>  
+      <li class="pv2 dib mr3">
+        <a href="/cam/952016" class="link white lh-title">
+          <span class="fw7 underline-hover">#952090</span>
+          <span class="db">Leica M2, B-, USA</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</template>
