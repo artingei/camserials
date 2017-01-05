@@ -1,2 +1,0 @@
-# camserials
-simplified 📷 serial search
