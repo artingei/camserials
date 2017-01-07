@@ -1,7 +1,0 @@
-{
-  "galaxy.meteor.com": { 
-     "env": { 
-       "MONGO_URL": "mongodb://camserials_1:(rWaxZQz6m]sC'&N@ds021650.mlab.com:21650/appdb" 
-     } 
-   }
-}
