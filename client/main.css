@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 
 body {
-	background: #eeeeee;
+	background: #fff;
 }
 
 footer {
@@ -12,16 +12,44 @@ footer {
 	width: 100%;
 }
 
-#iron-router-progress {
-    background-color : #9EEBCF;
-    box-shadow       : 0 0 5px rgba(0,0,0,.1);
-}
-#iron-router-progress.spinner:before {
-    border-color : #9EEBCF;
+#path0_fill {
+	fill: rgba(255,255,255,1);
+	-webkit-transition: fill 11s; /* Safari */
+  transition: all 1s;
+  -webkit-transform-origin: 50% 50%;
+	transform-origin: center;
 }
 
-#path0_fill {
-	color: red;
-	fill: red;
-	border: red;
+#logo:hover #path0_fill {
+  fill: #ffffff;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg); 
+}
+
+#iron-router-progress {
+    background-color : #FF725C;
+    height: 4px;
+    box-shadow : 0 0 5px blue;
+}
+
+#iron-router-progress.spinner:before {
+    border-color : #FF725C;
+}
+
+.tw {
+  overflow: hidden;
+  border-right: 0em solid transparent;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0em; 
+  -webkit-animation: typing 1.5s steps(100, end);
+  animation: typing 1.5s steps(100, end);
+  -webkit-animation-delay: .2s; 
+  animation-delay: .2s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
