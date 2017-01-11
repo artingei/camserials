@@ -56,8 +56,8 @@
       Find information about your historic camera.
     </h1>
   </div> -->
-  <div class="animated fadeIn center w-90 w-100-ns white bg-dark-blue pv4 pv5-ns">
-    <div class="w-100 ph5-ns center db">
+  <div class="animated fadeIn center w-100 white bg-dark-blue pt4 pb3 pt6-ns pb5-ns">
+    <div class="w-90 w-100-ns ph5-ns center db">
       <h2 class="f2-ns fw4 fw7-ns dib mr3-ns mb1 mb0-ns">I am looking for a </h2>
       <select class="f3 f2-ns fw7 ba bw0 pv3 pv2-ns ph3 navy bg-white db dib-ns w-100 w5-ns mr3-ns shadow-4">
         <option>Leica</option>
@@ -68,7 +68,7 @@
       <h2 class="f2-ns fw4 fw7-ns dib mr3-ns mb1 mb0-ns">with serial number </h2>
       <input class="f2-ns f4 fw7 navy pa3 pv2-ns ph3 db bw0 dib-ns w-100 w5-ns ml1-ns shadow-4" name="serial" type="number" id="serial">
       <button id="cta" class="dim f4 f3-ns fw7 tracked no-underline bg-animate tc pa4 pv3-ns ph4-ns mt4 mt4-ns db w-100 w-auto-ns white bw0 bg-light-red bg-animate pointer ttu"><img src="/assets/search.svg" class="v-mid mr3" style="height: 24px; margin-top: -5px" alt="Site Name">search now</button>
-      <div id="error" class="animated fadeIn db f3 light-red w-100 mt4">&nbsp;</div>
+      <div id="error" class="animated fadeIn db f3 light-red mt4">&nbsp;</div>
     </div>
   </div>
 </template>
@@ -111,7 +111,7 @@
 
 <template name="results">
   <section id="results" class="animated fadeInDown z-0">
-    <div class="center w-100 bg-dark-blue vh-100 white pv4 pv5-ns mb0">
+    <div class="center w-100 bg-dark-blue vh-100-ns white pv4 pv5-ns mb0">
       <div class="w-90 center w-100-ns ph5-ns center db">
         <h1 class="f2 f1-ns fw4 dib mt0 mb1">Serial number <span id="serial" class="fw7 animated fadeIn">?</span> matches <span id="model" class="fw7 animated fadeIn">?</span>.</h1>
         <button id="add" class="dn dib-ns dim f5 f4-ns fw7 no-underline bg-animate tc pv2 ph3 mt0 dark-blue pointer bw0 bg-white bg-animate fr ttu">
@@ -134,9 +134,11 @@
             <dd class="f4 fw4 ml0 ttu">serial end</dd>
             <dd id="end" class="f1 fw7 ml0 tw"></dd>
           </dl>
+          <dl class="db dib-ns w-auto-ns lh-title mr4-ns" id="lcf">
+          </dl>
           <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
             <dd class="f4 fw4 ml0 ttu">market value</dd>
-            <dd id="units" class="f1 fw7 ml0 tw"><a href="http://collectiblend.com/" target="_blank" id="collectiblendLink" class="white underline-hover">collectiblend➔</a></dd>
+            <dd id="collectiblend" class="f1 fw7 ml0 tw"><a href="http://collectiblend.com/" target="_blank" id="cbLink" class="white underline-hover">collectiblend➔</a></dd>
           </dl>
         </div>
         <button id="add" class="dn-ns db dim f5 f4-ns fw7 no-underline bg-animate tc pv2 ph3 mv3 dib dark-blue pointer bw0 bg-white bg-animate ttu">
@@ -155,7 +157,7 @@
 </template>
 
 <template name="suggestions">
-  <div class="w-100 bg-washed-blue mv0 mt0-ns ph5-ns pv5 center">
+  <div class="w-100 -blue mv0 mt0-ns ph5-ns pv5 center">
     <div class="w-90 w-100-ns center">
       <h2 class="f3 f3-ns navy fw4 dib mt0 mb0 tracked-mega ttu">Random serials</h2>
       <ul class="list f4 pl0 mt3 mb0">

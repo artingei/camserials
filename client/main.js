@@ -22,7 +22,7 @@ Template.home.onRendered(function(){
       if (leica[i].start <= camID && leica[i].end >= camID){
         FlowRouter.go('/cam/' + camID);
       } else {
-        document.getElementById("error").innerHTML = 'Nothing found. Seems that "'  + camID + '"' + 'is not in our database.';
+        document.getElementById("error").innerHTML = 'Nothing found. Seems that "'  + camID + '"' + ' is not in our database.';
       }
     }
   }
@@ -108,13 +108,18 @@ Template.results.onRendered(function(){
       document.getElementById("start").innerHTML = leica[i].start;
       document.getElementById("end").innerHTML = leica[i].end;
       year = year.substr(year.length - 4);
-      var uri = "http://collectiblend.com/Cameras/search.php?param=" + name + "+" +  year + "&page=1&desc";
-      document.getElementById("collectiblendLink").setAttribute("href", uri);
+      var cbLink_url = "http://collectiblend.com/Cameras/search.php?param=" + name + "+" +  year + "&page=1&desc";
+      document.getElementById("cbLink").setAttribute("href", cbLink_url);
+      if (leica[i].wiki) {
+        var lcfLink_url = leica[i].wiki;
+        document.getElementById("lcf").innerHTML =  "<dd class='f4 fw4 ml0 ttu'>wiki</dd><dd class='f1 fw7 ml0 tw'><a href='" + lcfLink_url + "' target='_blank' id='lcfLink' class='white underline-hover'>LCF➔</a></dd>"
+      } else {}
     }
   }
   } else {
   console.log('failed')
   }
+
 });
 
 var leica = 
@@ -126,27 +131,37 @@ var leica =
    "date": "1923"
  },
  {
+   "start": 100,
+   "end": 130,
+   "name": "Leica I",
+   "date": "1923"
+ },
+ {
    "start": 131,
    "end": 1000,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1925"
  },
  {
    "start": 1001,
    "end": 2445,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1926"
  },
  {
    "start": 2446,
    "end": 5433,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1926-27"
  },
  {
    "start": 5434,
    "end": 5700,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1928"
  },
  {
@@ -159,6 +174,7 @@ var leica =
    "start": 6301,
    "end": 13100,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1928"
  },
  {
@@ -171,6 +187,7 @@ var leica =
    "start": 13301,
    "end": 21478,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1929"
  },
  {
@@ -183,6 +200,7 @@ var leica =
    "start": 21811,
    "end": 34450,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1930"
  },
  {
@@ -195,12 +213,14 @@ var leica =
    "start": 34803,
    "end": 34817,
    "name": "Leica I (Luxus)",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1930"
  },
  {
    "start": 34818,
    "end": 60000,
    "name": "Leica I",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_I_(model_A)",
    "date": "1930"
  },
  {
