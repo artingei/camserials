@@ -46,6 +46,8 @@ Template.suggestions.onRendered(function(){
   var random6 = parseInt(Math.random() * (2882100 - 100) + 100);
   var random7 = parseInt(Math.random() * (2882100 - 100) + 100);
   var random8 = parseInt(Math.random() * (2882100 - 100) + 100);
+  var random9 = parseInt(Math.random() * (2882100 - 100) + 100);
+  var random10 = parseInt(Math.random() * (2882100 - 100) + 100);
   for (var i = 0; i < leica.length; i++){
     if (leica[i].start <= random1 && leica[i].end >= random1){
       document.getElementById("random1_serial").innerHTML = '#' + random1;
@@ -87,6 +89,16 @@ Template.suggestions.onRendered(function(){
       document.getElementById("random8_name").innerHTML = leica[i].name;
       document.getElementById("random8_link").setAttribute("href", '/cam/' + random8);
     }
+    if (leica[i].start <= random9 && leica[i].end >= random9){
+      document.getElementById("random9_serial").innerHTML = '#' + random9;
+      document.getElementById("random9_name").innerHTML = leica[i].name;
+      document.getElementById("random9_link").setAttribute("href", '/cam/' + random9);
+    }
+    if (leica[i].start <= random10 && leica[i].end >= random10){
+      document.getElementById("random10_serial").innerHTML = '#' + random10;
+      document.getElementById("random10_name").innerHTML = leica[i].name;
+      document.getElementById("random10_link").setAttribute("href", '/cam/' + random10);
+    }
   }
 });
 
@@ -112,6 +124,7 @@ Template.results.onRendered(function(){
       document.getElementById("cbLink").setAttribute("href", cbLink_url);
       if (leica[i].wiki) {
         var lcfLink_url = leica[i].wiki;
+        document.getElementById("lcf").className = "db dib-ns w-auto-ns lh-title mr4-ns";
         document.getElementById("lcf").innerHTML =  "<dd class='f4 fw4 ml0 ttu'>wiki</dd><dd class='f1 fw7 ml0 tw'><a href='" + lcfLink_url + "' target='_blank' id='lcfLink' class='white underline-hover'>LCF➔</a></dd>"
       } else {}
     }
@@ -168,6 +181,7 @@ var leica =
    "start": 5701,
    "end": 6300,
    "name": "Leica Compur",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Compur_Leica_(model_B)",
    "date": "1926-29"
  },
  {
@@ -181,6 +195,7 @@ var leica =
    "start": 13101,
    "end": 13300,
    "name": "Leica Compur",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Compur_Leica_(model_B)",
    "date": "1929"
  },
  {
@@ -194,6 +209,7 @@ var leica =
    "start": 21479,
    "end": 21810,
    "name": "Leica Compur",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Compur_Leica_(model_B)",
    "date": "1930"
  },
  {
@@ -207,6 +223,7 @@ var leica =
    "start": 34451,
    "end": 34802,
    "name": "Leica Compur",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Compur_Leica_(model_B)",
    "date": "1930"
  },
  {
@@ -5615,6 +5632,7 @@ var leica =
    "start": 455001,
    "end": 460000,
    "name": "Leica Ic",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_Ic",
    "date": "1949-50"
  },
  {
@@ -5645,6 +5663,7 @@ var leica =
    "start": 520001,
    "end": 524000,
    "name": "Leica Ic",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_Ic",
    "date": "1950-51"
  },
  {
@@ -5669,12 +5688,14 @@ var leica =
    "start": 560001,
    "end": 562800,
    "name": "Leica Ic",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_Ic",
    "date": "1951"
  },
  {
    "start": 562801,
    "end": 565000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1951"
  },
  {
@@ -5693,12 +5714,14 @@ var leica =
    "start": 575001,
    "end": 580000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1952-53"
  },
  {
    "start": 580001,
    "end": 610000,
    "name": "Leica IIIf",
+
    "date": "1951-52"
  },
  {
@@ -5735,6 +5758,7 @@ var leica =
    "start": 673001,
    "end": 674999,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1953-54"
  },
  {
@@ -5759,6 +5783,7 @@ var leica =
    "start": 682001,
    "end": 684000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1955"
  },
  {
@@ -5777,12 +5802,14 @@ var leica =
    "start": 700000,
    "end": 700000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1954"
  },
  {
    "start": 700001,
    "end": 710000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1954"
  },
  {
@@ -5813,6 +5840,7 @@ var leica =
    "start": 730001,
    "end": 746450,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
@@ -5825,12 +5853,14 @@ var leica =
    "start": 746501,
    "end": 750000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
    "start": 750001,
    "end": 759700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
@@ -5843,6 +5873,7 @@ var leica =
    "start": 760001,
    "end": 762000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1955"
  },
  {
@@ -5873,6 +5904,7 @@ var leica =
    "start": 775001,
    "end": 780000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
@@ -5885,12 +5917,14 @@ var leica =
    "start": 780091,
    "end": 780100,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1957"
  },
  {
    "start": 780101,
    "end": 787000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
@@ -5903,6 +5937,7 @@ var leica =
    "start": 789001,
    "end": 790000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1955"
  },
  {
@@ -5921,6 +5956,7 @@ var leica =
    "start": 800000,
    "end": 805000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
@@ -5933,12 +5969,14 @@ var leica =
    "start": 805101,
    "end": 807500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1955"
  },
  {
    "start": 807501,
    "end": 808500,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1956"
  },
  {
@@ -5957,12 +5995,14 @@ var leica =
    "start": 815001,
    "end": 816000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1956"
  },
  {
    "start": 816001,
    "end": 816900,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -5975,6 +6015,7 @@ var leica =
    "start": 817001,
    "end": 820500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -5993,6 +6034,7 @@ var leica =
    "start": 822001,
    "end": 822900,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1956"
  },
  {
@@ -6047,6 +6089,7 @@ var leica =
    "start": 830001,
    "end": 837500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -6065,6 +6108,7 @@ var leica =
    "start": 837721,
    "end": 839620,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -6077,6 +6121,7 @@ var leica =
    "start": 839701,
    "end": 840500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -6089,6 +6134,7 @@ var leica =
    "start": 840821,
    "end": 844780,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
@@ -6113,18 +6159,21 @@ var leica =
    "start": 850901,
    "end": 851000,
    "name": "Leica If",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1956"
  },
  {
    "start": 851001,
    "end": 854000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1956"
  },
  {
    "start": 854001,
    "end": 858000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6143,6 +6192,7 @@ var leica =
    "start": 862001,
    "end": 866620,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6167,6 +6217,7 @@ var leica =
    "start": 872001,
    "end": 877000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6179,6 +6230,7 @@ var leica =
    "start": 882001,
    "end": 886700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6191,6 +6243,7 @@ var leica =
    "start": 887001,
    "end": 888000,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1957"
  },
  {
@@ -6203,6 +6256,7 @@ var leica =
    "start": 893001,
    "end": 894000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6215,12 +6269,14 @@ var leica =
    "start": 894571,
    "end": 898000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
    "start": 898001,
    "end": 903000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6239,12 +6295,14 @@ var leica =
    "start": 907001,
    "end": 910000,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1957"
  },
  {
    "start": 910001,
    "end": 910500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
@@ -6257,42 +6315,49 @@ var leica =
    "start": 910601,
    "end": 915000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
    "start": 915001,
    "end": 915200,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
    "start": 915201,
    "end": 916000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1957"
  },
  {
    "start": 916001,
    "end": 919250,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1958"
  },
  {
    "start": 919251,
    "end": 920500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1958"
  },
  {
    "start": 920501,
    "end": 920520,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1958"
  },
  {
    "start": 920521,
    "end": 924400,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1958"
  },
  {
@@ -6305,18 +6370,21 @@ var leica =
    "start": 924501,
    "end": 924568,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1958"
  },
  {
    "start": 924569,
    "end": 924588,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1958"
  },
  {
    "start": 924589,
    "end": 926000,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1958"
  },
  {
@@ -6329,12 +6397,14 @@ var leica =
    "start": 926201,
    "end": 926700,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1958"
  },
  {
    "start": 926701,
    "end": 928922,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6497,6 +6567,7 @@ var leica =
    "start": 950301,
    "end": 951900,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6521,6 +6592,7 @@ var leica =
    "start": 952501,
    "end": 954800,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6551,6 +6623,7 @@ var leica =
    "start": 957001,
    "end": 959400,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6587,6 +6660,7 @@ var leica =
    "start": 961701,
    "end": 966500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6629,6 +6703,7 @@ var leica =
    "start": 972001,
    "end": 974700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6659,6 +6734,7 @@ var leica =
    "start": 976501,
    "end": 979500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6713,6 +6789,7 @@ var leica =
    "start": 984201,
    "end": 987000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1959"
  },
  {
@@ -6731,6 +6808,7 @@ var leica =
    "start": 987301,
    "end": 987600,
    "name": "Leica Ig",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/Leica_If",
    "date": "1960"
  },
  {
@@ -6791,6 +6869,7 @@ var leica =
    "start": 990751,
    "end": 993500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
@@ -6827,6 +6906,7 @@ var leica =
    "start": 996001,
    "end": 998000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
@@ -6839,12 +6919,14 @@ var leica =
    "start": 998301,
    "end": 1000000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
    "start": 1000001,
    "end": 1003700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
@@ -6887,6 +6969,7 @@ var leica =
    "start": 1007001,
    "end": 1011000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
@@ -6905,6 +6988,7 @@ var leica =
    "start": 1014301,
    "end": 1017000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1960"
  },
  {
@@ -6947,6 +7031,7 @@ var leica =
    "start": 1022001,
    "end": 1022700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -6959,6 +7044,7 @@ var leica =
    "start": 1023001,
    "end": 1027800,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -6989,6 +7075,7 @@ var leica =
    "start": 1032001,
    "end": 1035400,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -7025,6 +7112,7 @@ var leica =
    "start": 1038001,
    "end": 1038800,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -7037,6 +7125,7 @@ var leica =
    "start": 1039001,
    "end": 1040000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -7049,6 +7138,7 @@ var leica =
    "start": 1040067,
    "end": 1040068,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7061,6 +7151,7 @@ var leica =
    "start": 1040071,
    "end": 1040071,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -7073,6 +7164,7 @@ var leica =
    "start": 1040095,
    "end": 1040096,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7085,6 +7177,7 @@ var leica =
    "start": 1040601,
    "end": 1043000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1961"
  },
  {
@@ -7115,6 +7208,7 @@ var leica =
    "start": 1046501,
    "end": 1047800,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7163,6 +7257,7 @@ var leica =
    "start": 1055001,
    "end": 1059849,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7175,6 +7270,7 @@ var leica =
    "start": 1060000,
    "end": 1060000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7205,6 +7301,7 @@ var leica =
    "start": 1063001,
    "end": 1065000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7217,6 +7314,7 @@ var leica =
    "start": 1065201,
    "end": 1067500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1962"
  },
  {
@@ -7241,6 +7339,7 @@ var leica =
    "start": 1070001,
    "end": 1074000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1963"
  },
  {
@@ -7259,6 +7358,7 @@ var leica =
    "start": 1077001,
    "end": 1080000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1963"
  },
  {
@@ -7289,6 +7389,7 @@ var leica =
    "start": 1088001,
    "end": 1091000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1963"
  },
  {
@@ -7313,6 +7414,7 @@ var leica =
    "start": 1093801,
    "end": 1097700,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1964"
  },
  {
@@ -7361,6 +7463,7 @@ var leica =
    "start": 1100001,
    "end": 1102000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1964"
  },
  {
@@ -7385,6 +7488,7 @@ var leica =
    "start": 1102901,
    "end": 1103000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7403,6 +7507,7 @@ var leica =
    "start": 1105001,
    "end": 1106900,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7421,12 +7526,14 @@ var leica =
    "start": 1109001,
    "end": 1110500,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
    "start": 1110501,
    "end": 1112000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7457,6 +7564,7 @@ var leica =
    "start": 1128401,
    "end": 1130000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7481,6 +7589,7 @@ var leica =
    "start": 1133001,
    "end": 1134000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7493,6 +7602,7 @@ var leica =
    "start": 1134151,
    "end": 1135000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7505,6 +7615,7 @@ var leica =
    "start": 1135101,
    "end": 1136000,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1965"
  },
  {
@@ -7529,6 +7640,7 @@ var leica =
    "start": 1139001,
    "end": 1140900,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1966"
  },
  {
@@ -7571,6 +7683,7 @@ var leica =
    "start": 1155001,
    "end": 1157590,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1966"
  },
  {
@@ -7583,6 +7696,7 @@ var leica =
    "start": 1157601,
    "end": 1158995,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1966"
  },
  {
@@ -7625,6 +7739,7 @@ var leica =
    "start": 1164846,
    "end": 1164865,
    "name": "Leica M3",
+   "wiki": "http://www.l-camera-forum.com/leica-wiki.en/index.php/M3",
    "date": "1966"
  },
  {

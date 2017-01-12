@@ -1,13 +1,12 @@
 
-
-<template name="main">
-  <head>
-    <title>camserials</title>
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+<head>
+    <link rel="stylesheet" href="/css/tachyons.min.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
   </head>
+<template name="main">
+  
 
   <div class="animated fadeIn vh-100">
     <nav class="db dt-ns w-100 border-box bg-navy ph1 pv4 ph5-ns z-1">
@@ -38,7 +37,7 @@
       </a>
       <div class="db dtc-ns v-mid w-100 w-75-ns mt5 mt0-ns tc tr-ns">
         <h1 class="lh-title f5 f4-ns white lh-copy ma0 fr-ns center db ttu">
-          camserials helps you to find specific camera models from huge serial number pools. <a href="/about" class="link fw7 ttu light-red ml1-ns underline-hover">learn more</a>
+          camserials.org helps you to find specific camera models from huge serial number pools. <a href="/about" class="link fw7 ttu light-red ml1-ns underline-hover">learn more</a>
         </h1>
       </div>
     </nav>
@@ -61,7 +60,7 @@
       <h2 class="f2-ns fw4 fw7-ns dib mr3-ns mb1 mb0-ns">I am looking for a </h2>
       <select class="f3 f2-ns fw7 ba bw0 pv3 pv2-ns ph3 navy bg-white db dib-ns w-100 w5-ns mr3-ns shadow-4">
         <option>Leica</option>
-        <option disabled="true">Leica Lenses (coming soon!)</option>
+        <option disabled="true">Leica Lens (coming soon!)</option>
         <option disabled="true">Rolleiflex/Rolleicord (coming soon!)</option>
         <option disabled="true">Hasselblad (coming soon!)</option>
       </select>
@@ -75,34 +74,34 @@
  
 <template name="about">
  <article class="animated fadeIn cf w-90 w-100-ns pv3 ph5-ns center navy">
-  <header class="fl w-100 w-80-ns pv3-m pt5-ns pb0 mb0 mb2-ns">
+  <header class="fl w-100 pv3-m pt5-ns pb0 mb0 mb2-ns">
     <h2 class="lh-title f2 f1-ns navy mt0-ns">
-      Get <span class="light-red">easy and fast access</span> to data about your classic cameras such as Leica, Hasselblad, Rolleiflex and many more.
+      Get <span class="light-red">easy and fast access</span> to data about your vintage camera equipment such as Leica, Hasselblad, Rolleiflex and many more.
     </h2>
   </header>
   <section class="fl w-100">
-    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pr4">
-      <h3>Now</h3>
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pr3-ns">
+      <h3>Info</h3>
       <p class="f4 lh-copy measure">
-        Initially I built <span class="i">camserials</span> just for myself until I realised it could provide some kind of value for the community. Currently <span class="i">camserials</span> is a simple search engine. When you enter the serial number of any classic Leica, Rolleiflex or Hasselblad you will get back a short abstract about the specific model.
+        Initially I built <span class="i">camserials.org</span> just for myself until I realised it could provide some kind of value for the community. Currently <span class="i">camserials.org</span> is a simple search engine. When you enter the serial number of any classic Leica, Rolleiflex (coming soon!) or Hasselblad (coming soon!) you will get a short abstract about the specific model.
       </p>
     </div>
-    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph2">
-      <h3>Future</h3>
-      <p class="f4 lh-copy measure">
-        If you are missing specific models or manufacturers you can contact me via <a href="mailto:issue@camserials.org" class="link dim underline-hover light-red">mail</a> or open an issue on github, where the project is published. Furthermore I am thinking about futher features. You are welcome to contribute your ideas to the project.
-      </p>
-    </div>
-    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph2">
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph3-ns">
       <h3>Support</h3>
       <p class="f4 lh-copy measure">
-        <span class="i">camserials</span> is built & maintained in my free time. If you are happy with the product you are free to send some coins over via <a href="https://www.patreon.com/" target="_blank" class="link dim underline-hover light-red">patreon</a>. If you spot errors within the dataset please mail me here. Thanks!
+        <span class="i">camserials.org</span> is built & maintained in my free time. If you are happy with the app and would like to support this project you are free to micro-donate via <a href="https://patreon.com/user?u=4807038&utm_campaign=creatorshare" target="_blank" class="link dim underline-hover light-red">patreon</a> which helps me to cover server costs. If you spot errors within the dataset please mail me <a href="mailto:issue@camserials.org" class="link dim underline-hover light-red">here</a> or open an issue on <a href="https://github.com/artingei/camserials" class="link dim underline-hover light-red" target="_blank">github</a>, where the project is published. Thank you!
       </p>
     </div>
-    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pl4-ns pl2">
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns ph3-ns">
+      <h3>Future</h3>
+      <p class="f4 lh-copy measure">
+        I am interested in improving and expanding this project. Maybe you have some conceptional input or a simple feature request? Just drop me some lines via mail. You are welcome to give me feedback via <a href="mailto:mail@camserials.org" class="link dim underline-hover light-red">mail</a>.
+      </p>
+    </div>
+    <div class="fl w-100 w-50-m w-25-ns pv3-m pv1-ns pl3-ns">
       <h3>Disclaimer</h3>
       <p class="f4 lh-copy measure">
-        <span class="i">camserials</span> is a free open-source project and does not belong to any organization. info for tech-savvy people: meteor was used as base stack, simple javascript does the action.
+        This is a free open-source project and does not belong to any organization. <span class="i">camserials.org</span> is built with meteor.
       </p>
     </div>
   </section>
@@ -134,7 +133,7 @@
             <dd class="f4 fw4 ml0 ttu">serial end</dd>
             <dd id="end" class="f1 fw7 ml0 tw"></dd>
           </dl>
-          <dl class="db dib-ns w-auto-ns lh-title mr4-ns" id="lcf">
+          <dl class="dn w-auto-ns lh-title mr4-ns" id="lcf">
           </dl>
           <dl class="db dib-ns w-auto-ns lh-title mr4-ns">
             <dd class="f4 fw4 ml0 ttu">market value</dd>
@@ -142,7 +141,7 @@
           </dl>
         </div>
         <button id="add" class="dn-ns db dim f5 f4-ns fw7 no-underline bg-animate tc pv2 ph3 mv3 dib dark-blue pointer bw0 bg-white bg-animate ttu">
-          <a href="/" class="navy">back to search</a>
+          <a href="/" class="navy no-underline">back to search</a>
         </button>
       </div>
     </div>
@@ -157,9 +156,9 @@
 </template>
 
 <template name="suggestions">
-  <div class="w-100 -blue mv0 mt0-ns ph5-ns pv5 center">
+  <div class="animated fadeIn w-100 -blue mv0 mt0-ns ph5-ns pv5 center">
     <div class="w-90 w-100-ns center">
-      <h2 class="f3 f3-ns navy fw4 dib mt0 mb0 tracked-mega ttu">Random serials</h2>
+      <h2 class="f3 f3-ns navy fw7 dib mt0 mb0 tracked-mega ttu">Random serials</h2>
       <ul class="list f4 pl0 mt3 mb0">
         <li class="pv2 db dib-ns mr3">
           <a href="" id="random1_link" class="link navy lh--title">
@@ -207,6 +206,18 @@
           <a href="" id="random8_link" class="link navy lh-title">
             <span class="fw7 underline-hover light-red" id="random8_serial">#1385634</span>
             <span class="db f4" id="random8_name">Leica Leicaflex SL2</span>
+          </a>
+        </li>
+        <li class="pv2 db dib-ns mr3">
+          <a href="" id="random9_link" class="link navy lh-title">
+            <span class="fw7 underline-hover light-red" id="random9_serial">#2121853</span>
+            <span class="db f4" id="random9_name">Leica Minilux</span>
+          </a>
+        </li>
+        <li class="pv2 db dib-ns mr3">
+          <a href="" id="random10_link" class="link navy lh-title">
+            <span class="fw7 underline-hover light-red" id="random10_serial">#1425929</span>
+            <span class="db f4" id="random10_name">Leica CL</span>
           </a>
         </li>
       </ul>
