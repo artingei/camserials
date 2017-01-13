@@ -9203,13 +9203,13 @@ var leica =
  {
    "start": 1800001,
    "end": 1850000,
-   "name": "Leica Leica Mini",
+   "name": "Leica Mini",
    "date": "1991"
  },
  {
    "start": 1850001,
    "end": 1900000,
-   "name": "Leica Leica Mini II",
+   "name": "Leica Mini II",
    "date": "1993"
  },
  {
